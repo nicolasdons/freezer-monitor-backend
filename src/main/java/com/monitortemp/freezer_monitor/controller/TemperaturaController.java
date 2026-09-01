@@ -20,7 +20,12 @@ public class TemperaturaController {
 
     @PostMapping
     public ResponseEntity<Void> receberLeitura(@RequestBody LeituraDTO dto) {
-        System.out.println("LOG: Recebido de " + dto.macAddress() + " -> " + dto.temperatura() + " °C");
+        System.out.println("DTO RECEBIDO: MAC=" + dto.macAddress() + " | Temp=" + dto.temperatura());
+
+        if (dto.macAddress() == null || dto.temperatura() == null) {
+            System.err.println("ERRO: Dados recebidos sao nulos!");
+            return ResponseEntity.badRequest().build();
+        }
 
         LeituraTemperatura leitura = new LeituraTemperatura(dto.macAddress(), dto.temperatura());
         repository.save(leitura);
