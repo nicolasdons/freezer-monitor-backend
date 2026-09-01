@@ -1,4 +1,4 @@
-package com.esp32project.monitor;
+package com.monitortemp;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
