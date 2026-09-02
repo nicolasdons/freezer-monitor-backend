@@ -4,11 +4,11 @@
 #include <DallasTemperature.h>
 
 
-const char* SSID_WIFI = ;
-const char* SENHA_WIFI = ;
+const char* SSID_WIFI = "Nicolalau";
+const char* SENHA_WIFI = "itxe1914" ;
 
 
-const char* URL_API = ;
+const char* URL_API = "http://192.168.18.16:8080/api/temperatura";
 
 
 const int PINO_DS18B20 = 4; // Pino D4
